@@ -1,4 +1,5 @@
 import { atom, useAtom } from "jotai";
+import { Link } from "react-router-dom";
 
 const pictures = [
   "DSC00680",
@@ -43,12 +44,19 @@ export const UI = () => {
   return (
     <>
       <main className="pointer-events-none select-none z-10 fixed inset-0 flex justify-between flex-col">
-        <a
-          className="pointer-events-auto mt-10 ml-10"
-          href=""
+        {/* Кнопка "Назад" */}
+        <Link
+          to="/"
+            className="pointer-events-auto fixed top-4 left-4 bg-white/10 text-white px-3 py-1 rounded hover:bg-white/20 transition z-50 mobile-back-button"
+
         >
-          <img className="w-20" src="" />
+          Home
+        </Link>
+
+        <a className="pointer-events-auto mt-10 ml-10" href="">
+          <img className="w-20" src="" alt="" />
         </a>
+
         <div className="w-full overflow-auto pointer-events-auto flex justify-center">
           <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
             {[...pages].map((_, index) => (
@@ -89,53 +97,37 @@ export const UI = () => {
       <div className="fixed inset-0 flex items-center -rotate-2 select-none">
         <div className="relative">
           <div className="bg-white/0 animate-horizontal-scroll flex items-center gap-8 w-max px-8">
-            <h1 className="shrink-0 text-white text-10xl font-black ">
-              text
-            </h1>
+            <h1 className="shrink-0 text-white text-10xl font-black ">text</h1>
             <h2 className="shrink-0 text-white text-8xl italic font-light">
               Text
             </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">
-              Text
-            </h2>
+            <h2 className="shrink-0 text-white text-12xl font-bold">Text</h2>
             <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
               Text
             </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">
-              Text
-            </h2>
+            <h2 className="shrink-0 text-white text-9xl font-medium">Text</h2>
             <h2 className="shrink-0 text-white text-9xl font-extralight italic">
               Text
             </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">
-              text
-            </h2>
+            <h2 className="shrink-0 text-white text-13xl font-bold">text</h2>
             <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
               Text
             </h2>
           </div>
           <div className="absolute top-0 left-0 bg-white/0 animate-horizontal-scroll-2 flex items-center gap-8 px-8 w-max">
-            <h1 className="shrink-0 text-white text-10xl font-black ">
-              Text
-            </h1>
+            <h1 className="shrink-0 text-white text-10xl font-black ">Text</h1>
             <h2 className="shrink-0 text-white text-8xl italic font-light">
               text
             </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">
-              Text
-            </h2>
+            <h2 className="shrink-0 text-white text-12xl font-bold">Text</h2>
             <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
               Text
             </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">
-              Text
-            </h2>
+            <h2 className="shrink-0 text-white text-9xl font-medium">Text</h2>
             <h2 className="shrink-0 text-white text-9xl font-extralight italic">
               Text
             </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">
-              text
-            </h2>
+            <h2 className="shrink-0 text-white text-13xl font-bold">text</h2>
             <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
               TextS
             </h2>
