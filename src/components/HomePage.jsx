@@ -122,7 +122,7 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
         <Link to="/" onClick={() => setMenuOpen(false)}>Galleria</Link>
         <Link to="/book" onClick={() => setMenuOpen(false)}>BOOK</Link>
         <a href="#" onClick={() => setMenuOpen(false)}>Taidekoulu</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Kehystamo</a>
+        <a href="#" onClick={() => setMenuOpen(false)}>Vuokraaminen</a>
         <a href="#" onClick={() => setMenuOpen(false)}>Tilaustyo</a>
         <a href="#" onClick={() => setMenuOpen(false)}>yhteustiedot</a>
       </div>
@@ -133,7 +133,7 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
           <Link to="/" className="active a"><span>Galleria</span></Link>
           <Link to="/book" className="a"><span>BOOK</span></Link>
           <a className="a"><span>Taidekoulu</span></a>
-          <a className="a"><span>Kehystamo</span></a>
+          <a className="a"><span>Vuokraaminen</span></a>
           <a className="a"><span>Tilaustyo</span></a>
           <a className="a"><span>yhteustiedot</span></a>
           <div className="cursor" ref={cursorRef}></div>
@@ -143,10 +143,7 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
           <h2>SV Galleria</h2>
           <h1>HOPEINEN SIVELLIN</h1>
           <p className="ended">
-            Antonio Canova’s statue The Three Graces is a Neoclassical sculpture,
-            in marble, of the mythological three Charites, daughters of Zeus –
-            identified as Euphrosyne, Aglaea and Thalia – representing youth/beauty,
-            mirth, and elegance. They presided over banquets to delight the guests of the gods.
+            Tervetuloa SV Galleriaan, Helsingin keskustassa Runeberginkadulla sijaitsevaan monipuoliseen taideliikkeeseen ja näyttelygalleriaan. Vuonna 2005 perustettu galleriamme on kasvanut vahvaksi kuvataiteen edistäjäksi, joka tarjoaa taiteilijoille ja taideystäville ainutlaatuisen kohtaamispaikan. Sijaintimme Kampin metroaseman läheisyydessä tekee meistä helposti saatavilla olevan taidekohteen niin paikallisille kuin kauempaa saapuville vieraille.
           </p>
         </div>
 
@@ -169,7 +166,7 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
                 className={activeIndex === 2 ? "active" : ""}
                 onClick={() => setActiveIndex(2)}
               >
-                Vuokraaminen
+                Kehystämö
               </li>
             </ul>
             <p id="content">{contentTexts[activeIndex]}</p>
@@ -177,7 +174,7 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
         </div>
 
         <div className="third">
-          <h1>The Making</h1>
+          <h1>Making ART</h1>
           <p>
             Canova's assistants roughly blocked out the marble, leaving Canova to perform
             the final carving and shape the stone to highlight the Graces soft flesh.

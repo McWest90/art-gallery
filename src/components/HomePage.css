@@ -16,7 +16,7 @@ body {
   overscroll-behavior: none;
   font-family: 'Nanum Myeongjo', serif;
   color: #fff;
-  background: #000;
+  background: #000000;
   scroll-behavior: smooth;
   overflow: hidden;
 }
