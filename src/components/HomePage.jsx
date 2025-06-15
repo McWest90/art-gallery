@@ -1,42 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import Masonry from 'react-masonry-css';
+import './index.css';
 
 export const HomePage = () => {
   const cursorRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const contentTexts = [
-    `Meidän kurssin avainsana – jokainen ihminen on luova ja jokaisen sisällä on taiteilija. Meidän tavoite  on antaa oikeat avaimet, jotta hän voisi astua taidemaailman ilman rajoja.
-Vuonna 2009 perustettu ja vuonna 2022 uudistunut taidetila Hopeinen Sivellin tarjoaa kaikille taidetta rakastaville, iästä ja kokemuksesta riippumatta, aloittelijoille ja pitkään harrastanneille ammattilisesti ja rakkaudella opastettuja kuvataidekursseja.
-Suunniteletko taideuraa ja kaipaat teho – intensiivikursseja ja  opastusta tai haluaisit toteuttaa haaveitasi ja opiskella maalausta rennosti ja saada uusia elämyksia – Hopeinen Sivellin on oikea paikka.
-Gallerian tilassa pidetään  erilaiseja taidemaalaus- ja piirustuskursseja ja työpajoja maanantaista suunnuntaihin . Kursillamme opetellaan moniaperustaide tekniikoita ja menetelmiä. Öljyvärimaalaus, akryylimaalaus, akvarellimaalaus, ikonimaalaus, pastelli, tempera, piirustus eri materiaaleilla  akateemisella ja modernilla tavalla .Vanhanajan teknikoita tai sekatekniikka, intuitiivinen, abstraktimaalaus eri aiheen pohjalta – kurssilta löytyy erilaisia mahdollisuuksia ja opiskelutapoja. Ryhmäopetus eri teemoin, työpaja, henkilökohtainen opastus pienissä ryhmissä, yksityisiä taidetuntia.
-Kurssien ohjelma on räätälöity niin että opiskeljat saavat aina ammattilista ja henkilökohtaista opetusta.  Opettajallamme on  akateeminen, TaM tausta ja vuosien työskentelyä taidealalla millä voidaan pätevästi yhdistää klassista oppia, nykyajan trendejä ja menetelmiä opettaen oppilaalle askel askeleelta.
-Taidetta harrastanneille ja edistyneille taiteilijoille pidetään myös yksityisiä kuvataidetunteja sopimuksen mukaan. Tämä opiskelutapa antaa mahdollisuuden  vastata oppilaan tarpeita ja näin rätälöityä hänelle intensiivista opetusta.
-Opettajat
-TaM Victor Mark on ollut Hopeinen Sivellin -taidekoulun opettajana jo monta vuotta. Hänellä on ylempi koulutus ja monivuotinen kokemus alalla.
-Victor Mark on johtava opettaja ja koulun perustaja vuodesta 2008. Kurssilla hän opettaa pääsääntöisesti öljy- ja akryylimaalausta, ikonimaalausta ja piirustusta sekä ryhmässä että yksityistunneilla ma, ti, ke,su. Hänen opetusmenetelmän pääpaine on akateeminen, ammattilinen ohjaus rakkaudella. Hän uskoo, että paras lopputulos ja tyytyväisyys opiskelijoille tulee, kun intohimo ja luovuus ovat yhdistetty taidetekniikan hallitsemiseen ja perussääntöjen ymmärrykseen. Laaja kokemus mahdollistaa Victorin  antamaan opiskelijoille tietoja kaikista maalaus- ja piirustus päätekniikoista.`,
-    `Viktor opiskeli taidemaalausta Pietarissa. Viktorin diplomityön tentissä opettajana oli tunnettu taiteilija Zagonek Vyacheslav Frantsovits. Viktorilla on ollut näyttelyjä ympäri maailmaa. Näyttelyitä on ollut Saksassa, Ranskassa, Suomessa, Kazakstanissa, Australiassa, Venäjällä jne. Muutaman vuoden ajan hän on tehnyt maalauksia Puolan gallerioille ja Ranskan taidehuutokauppoja varten. Viktor on opetellut flaamilaisen maalaustekniikan. Tämän jälkeen hän aloitti kehittämään muotokuvamaalaamisen ja maisemien ulkona maalamisen taitoja. Viisi vuotta sitten Viktor  perusti  oman galleriansa "Hopeinen Sivellin" Helsinkiin, Runeberginkatu 17.
-Hän työskentelee monipuolisesti ja menestyksellisesti taideopettajana. Täällä  hetkellä  hänellä on yhteensä yli sata oppilasta omassa "Hopeinen Sivellin"- taidekoulussa ja kansalaisopiston ryhmissä Haminan seudulla. Viktor tekee seinämaalauksia ja lasimaalauksia. Novgorodin alueella tehdään  ikoneja Viktorin suunnitelmien mukaan rakennetun kirkon ikonostaasiin. Viktor  on maalannut paljon tauluja. Hän on tehnyt myös lasten kanssa nukkeja ja pitänytt esityksiä omassa nukketeatterissa.  Näytelmän musiikkisäestyksen on tehnyt hänen poikansa Andrey Mark, muusikko ja säveltäjä.  Täällä  hetkellä Viktorilla  on paljon luovia ideoita ja mielenkiintoisia projekteja.`,
-    `SV Galleria on n.40 neliön tila, tänä kesänä uusittu näyttelytilaa. Tilaa vuokrataan yksityisille ja yhteisöille hakumenettelyn kautta. Etusijalla ovat erityistä tukea tarvitsevat taiteilijat ja ryhmät. Galleriaamme on avoin ja jatkuva haku. Näyttelytilan ikkuna  5x 2,5 m aukenee suoraan Runeberginkadulle. Syvät ikkunapenkit. sijaitsevat lattiatasossa Seinien pinta-ala on noin 56 m2 – isojen seinien pituudet ovat 18 m, 5m, ja 8,5 m. Huonekorkeus on 2,7 m. (pääoven korkeus on 2 m) ja korkeus mahdollistaa isokokoisten teosten esittelyn. Seinät on maalattu valkoisiksi ja lattiat ovat harmaan vaaleat. Valaistuksena on kiskoissa liikuteltavat led-kohdevalaisimet. Tiloissa on myös wc ja pieni varastotila.  Meillä on oma kehystämö taiteilijoiden avuksi.  Vv 2022-2023 näyttelyajat ovat haettavissa. Kysy lisää! Hakuohjeet, vuokra ja tarkemmat tiedot Näyttelytilan vuokra vuosina 2022 -2023 on  600 euroa/1viikko, 800 euroa /10 päivää, 1200 euroa / 20 päivää tai sopimuksen mukaan.
-Teosten myyntiprovisio on 20 %.
-Vuokraan sisältyy tilavuokra, valaistus, lämmitys, näyttelyn valvonta ja siivous. Näyttelyn pystytys- ja purkuavusta sekä tiedotus- ja markkinointiavusta sovitaan gallerian henkilökunnan kanssa. 
-Hakemukseen tulee liittää: 
-- vapaamuotoinen hakemus, joka sisältää teoksista kuvaesimerkkejä, koot ja näyttelyn ajankohdasta 
-- hakijan yhteystiedot ja hakemuksen palautuskuori 
-- luonnoksia tarjottavasta näyttelystä tai aiemmasta tuotannosta 
--mahdollinen näyttelysuunnitelma, teosluettelo (taiteilijan ja teoksen nimi, tekniikka, koko ja 
-valmistusvuosi) 
-- CV eli henkilön ansioluettelo 
-- portfolio, mikäli sellainen on tehty 
--näyttelyn mainoskuva , jos se on jo valmis
-Näytteilleasettajat valitsee Kaarisilta ry:n näyttelytoimikunta.
-Lisätietoja hausta ja vuokrauksesta: puh +358 40 8164856, Viktor tai sv.galleria@gmail.com ,tai POSTIOSOITTEESEEN  Galleria Hopeinen Sivellin,
-Runeberginkatu 17 
-00100 Helsinki
-Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrityksille ja yhteisöille max 45 hengen iltatilaisuuksiin pe klo 17-20-00, la  17-20.00 ja su sovittuun aikaan. Lisätietoja vuokrauksesta Viktorilta.`
+  const sectionsData = [
+    {
+      title: "Taidekoulu",
+      text: `Hopeinen Sivellin tarjoaa laadukkaita kuvataidekursseja Helsingissä. TaM Victor Markin johdolla opetetaan öljymaalausta, akryyliä, ikonimaalausta ja piirustusta aloittelijoille ja edistyneille – rakkaudella ja ammattitaidolla.`,
+      images: [ // Картинки для "Taidekoulu"
+        { src: "/other/Art school/IMG-20250506-WA0024.jpg", alt: "Taidekoulu" },
+        { src: "/other/Art school/IMG-20250127-WA0045.jpg", alt: "Taidekoulu" },
+        { src: "public/other/Art school/IMG-20250323-WA0033.jpg", alt: "Taidekoulu"}
+      ]
+    },
+    {
+      title: "Viktor mark",
+      text: `TaM Viktor Mark opiskeli taidetta Pietarissa ja suoritti diplomityönsä mestari Zagonek Vyacheslavin johdolla. Hänen töitään on ollut esillä näyttelyissä Saksassa, Ranskassa, Australiassa, Suomessa ja useissa muissa maissa.`,
+      images: [ // Картинки для "Viktor mark"
+        { src: "/other/Viktor mark/IMG-20250127-WA0021.jpg", alt: "Viktor Mark" },
+        { src: "/other/Viktor mark/IMG-20250202-WA0032.jpg", alt: "Viktor Mark" },
+        { src: "/other/Viktor mark/IMG-20250212-WA0100.jpg", alt: "Viktor Mark" }
+      ]
+    },
+    {
+      title: "Kehystämö",
+      text: `SV Galleria Helsingissä tarjoaa 40 m² valoisan näyttelytilan isolla ikkunagallerialla Runeberginkadulla. Avoin haku, vuokra alkaen 600 €/viikko. Etusijalla erityistä tukea tarvitsevat taiteilijat.`,
+      images: [ // Картинки для "Kehystämö"
+        { src: "/other/Framing shop/2025-06-15 205525.png", alt: "Kehystämö" },
+        { src: "/other/Framing shop/DSCN3952.JPG", alt: "Kehystämö" }
+      ]
+    }
   ];
+
 
   useEffect(() => {
     const loader = document.querySelector(".lds-roller");
@@ -98,6 +98,33 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
     };
   }, []);
 
+  const galleryImages = [
+    { src: "/arts/30x40  7.jpg", alt: "Art 1" },
+    { src: "/arts/40ч50  2.jpg", alt: "Art 2" },
+    { src: "/arts/DSCN3952.JPG", alt: "Art 3" },
+    { src: "/arts/DSCN4708.JPG", alt: "Art 4" },
+    { src: "/arts/IMG-20250430-WA0000.jpeg", alt: "Art 5" },
+    { src: "/arts/IMG-20250430-WA0002.jpeg", alt: "Art 6" },
+    { src: "/arts/IMG-20250430-WA0007.jpeg", alt: "Art 7" },
+    { src: "/arts/IMG-20250430-WA0014.jpeg", alt: "Art 8" },
+    { src: "/arts/SDC11381.JPG", alt: "Art 9" },
+    { src: "/arts/SDC11915.JPG", alt: "Art 10" },
+    { src: "/arts/SDC12382 (2).JPG", alt: "Art 11" },
+    { src: "/arts/SDC13401 (2).jpg", alt: "Art 12" },
+    { src: "/arts/Untitled presentation.jpg", alt: "Art 13" },
+    { src: "/arts/Untitled-1.jpg", alt: "Art 14" },
+    { src: "/arts/UntitledHHHHHHHHHHHHH-3.jpg", alt: "Art 15" }
+  ];
+const breakpointColumnsObj = {
+    default: 3, // <-- ГЛАВНОЕ ИЗМЕНЕНИЕ
+    1100: 2,
+    700: 1
+  };
+
+  const middleIndex = Math.ceil(galleryImages.length / 2);
+  const row1Images = galleryImages.slice(0, middleIndex);
+  const row2Images = galleryImages.slice(middleIndex);
+
   return (
     <>
       {/* Loader */}
@@ -138,48 +165,89 @@ Ilta –ja juhla tilaisuuksiin Galleriatilaa vuokrataan myös yksityisille, yrit
           <a className="a"><span>yhteustiedot</span></a>
           <div className="cursor" ref={cursorRef}></div>
         </nav>
+        <div className="main-container" style={{ visibility: "hidden" }}></div>
 
         <div className="first">
-          <h2>SV Galleria</h2>
-          <h1>HOPEINEN SIVELLIN</h1>
-          <p className="ended">
-            Tervetuloa SV Galleriaan, Helsingin keskustassa Runeberginkadulla sijaitsevaan monipuoliseen taideliikkeeseen ja näyttelygalleriaan. Vuonna 2005 perustettu galleriamme on kasvanut vahvaksi kuvataiteen edistäjäksi, joka tarjoaa taiteilijoille ja taideystäville ainutlaatuisen kohtaamispaikan. Sijaintimme Kampin metroaseman läheisyydessä tekee meistä helposti saatavilla olevan taidekohteen niin paikallisille kuin kauempaa saapuville vieraille.
-          </p>
+          {/* ===== НАЧАЛО: ЗАМЕНА ДЛЯ MASONRY ===== */}
+          <div className="scrolling-gallery">
+            {/* Первая строка, движется влево */}
+            <div className="scrolling-gallery-row row-1">
+              {/* Дублируем изображения для бесшовной прокрутки */}
+              {[...row1Images, ...row1Images].map((image, index) => (
+                <div className="gallery-image" key={`row1-${index}`}>
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              ))}
+            </div>
+
+            {/* Вторая строка, движется вправо */}
+            <div className="scrolling-gallery-row row-2">
+              {/* Также дублируем */}
+              {[...row2Images, ...row2Images].map((image, index) => (
+                <div className="gallery-image" key={`row2-${index}`}>
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* ===== КОНЕЦ: ЗАМЕНА ДЛЯ MASONRY ===== */}
+          <div className="first-content">
+            <h2>SV Galleria</h2>
+            <h1>HOPEINEN SIVELLIN</h1>
+            <p className="ended">
+              Tervetuloa SV Galleriaan, Helsingin keskustassa Runeberginkadulla sijaitsevaan monipuoliseen taideliikkeeseen ja näyttelygalleriaan. Vuonna 2005 perustettu galleriamme on kasvanut vahvaksi kuvataiteen edistäjäksi, joka tarjoaa taiteilijoille ja taideystäville ainutlaatuisen kohtaamispaikan. Sijaintimme Kampin metroaseman läheisyydessä tekee meistä helposti saatavilla olevan taidekohteen niin paikallisille kuin kauempaa saapuville vieraille.
+            </p>
+          </div>
         </div>
 
         <div className="section second">
-          <div className="second-container">
-            <ul>
-              <li
-                className={activeIndex === 0 ? "active" : ""}
-                onClick={() => setActiveIndex(0)}
-              >
-                Taidekoulu
-              </li>
-              <li
-                className={activeIndex === 1 ? "active" : ""}
-                onClick={() => setActiveIndex(1)}
-              >
-                Viktor mark
-              </li>
-              <li
-                className={activeIndex === 2 ? "active" : ""}
-                onClick={() => setActiveIndex(2)}
-              >
-                Kehystämö
-              </li>
-            </ul>
-            <p id="content">{contentTexts[activeIndex]}</p>
+  <div className="second-container">
+
+    {/* --- Левая колонка с текстом --- */}
+    <div className="text-content-column">
+      <ul>
+        {sectionsData.map((section, index) => (
+          <li
+            key={section.title}
+            className={activeIndex === index ? "active" : ""}
+            onClick={() => setActiveIndex(index)}
+          >
+            {section.title}
+          </li>
+        ))}
+      </ul>
+      <p id="content">{sectionsData[activeIndex].text}</p>
+    </div>
+
+    {/* --- Правая колонка с галереей Masonry --- */}
+    <div className="gallery-column">
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+        key={activeIndex} // ВАЖНО: этот ключ заставляет галерею перерисовываться при смене activeIndex
+      >
+        {sectionsData[activeIndex].images.map((image, index) => (
+          <div key={index} className="masonry-image-item">
+            <img src={image.src} alt={image.alt} style={{ width: '100%' }} />
           </div>
-        </div>
+        ))}
+      </Masonry>
+    </div>
+
+  </div>
+</div>
 
         <div className="third">
           <h1>Making ART</h1>
           <p>
-            Canova's assistants roughly blocked out the marble, leaving Canova to perform
-            the final carving and shape the stone to highlight the Graces soft flesh.
-            This was a trademark of the artist, and the piece shows a strong allegiance
-            to the Neo-Classical movement in sculpture.
+            Tällä hetkellä Viktor Mark opettaa yli sataa oppilasta omassa Hopeinen Sivellin -taidekoulussaan sekä kansalaisopistossa Haminan seudulla.
+          </p>
+          <p>
+            Hän toteuttaa myös seinä- ja lasimaalauksia, ja hänen suunnittelemiaan ikoneja on käytetty Novgorodin alueelle rakennetussa kirkossa. Viktor on maalannut lukuisia teoksia.
+          </p>
+          <p>
+            Hän on ohjannut lasten nukketeatteria ja tekee yhteistyötä poikansa, säveltäjä Andrey Markin kanssa. Viktorilla on runsaasti luovia ideoita ja meneillään useita taideprojekteja.
           </p>
         </div>
 
