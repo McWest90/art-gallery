@@ -15,7 +15,7 @@ export const HomePage = () => {
       images: [ // Картинки для "Taidekoulu"
         { src: "/other/Art school/IMG-20250506-WA0024.jpg", alt: "Taidekoulu" },
         { src: "/other/Art school/IMG-20250127-WA0045.jpg", alt: "Taidekoulu" },
-        { src: "public/other/Art school/IMG-20250323-WA0033.jpg", alt: "Taidekoulu"}
+        { src: "/other/Art school/IMG-20250323-WA0033.jpg", alt: "Taidekoulu"}
       ]
     },
     {
