@@ -7,6 +7,13 @@ import { Canvas } from "@react-three/fiber";
 import { Loader } from "@react-three/drei";
 import { Suspense } from "react";
 
+import { TaidekouluPage } from './components/TaidekouluPage';
+import { ViktorMarkPage } from './components/ViktorMarkPage';
+import { KehystamoPage } from "./components/KehystamoPage";
+import { VuokraaminenPage } from './components/VuokraaminenPage';
+import { TilaustyoPage } from './components/TilaustyoPage';
+import { YhteystiedotPage } from './components/YhteystiedotPage';
+
 function App() {
   return (
     <Router>
@@ -34,6 +41,12 @@ function App() {
             </>
           }
         />
+         <Route path="/taidekoulu" element={<TaidekouluPage />} />
+        <Route path="/viktor-mark" element={<ViktorMarkPage />} />
+        <Route path="/kehystamo" element={<KehystamoPage />} />
+        <Route path="/vuokraaminen" element={<VuokraaminenPage />} />
+        <Route path="/tilaustyo" element={<TilaustyoPage />} />
+        <Route path="/yhteustiedot" element={<YhteystiedotPage />} />
       </Routes>
     </Router>
   );

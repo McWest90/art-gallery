@@ -2,22 +2,23 @@ import { atom, useAtom } from "jotai";
 import { Link } from "react-router-dom";
 
 const pictures = [
+  "30x407",
+  "40x502",
+  "DSCN3952",
+  "DSCN4708",
+  "IMG-20250430",
+  "IMG-20250431",
+  "IMG-20250432",
+  "IMG-20250433",
+  "SDC11381",
+  "SDC11915",
+  "SDC12383",
+  "SDC13402",
+  "Untitled1",
+  "Untitled2",
+  "Untitled3",
   "DSC00680",
   "DSC00933",
-  "DSC00966",
-  "DSC00983",
-  "DSC01011",
-  "DSC01040",
-  "DSC01064",
-  "DSC01071",
-  "DSC01103",
-  "DSC01145",
-  "DSC01420",
-  "DSC01461",
-  "DSC01489",
-  "DSC02031",
-  "DSC02064",
-  "DSC02069",
 ];
 
 export const pageAtom = atom(0);
@@ -97,39 +98,39 @@ export const UI = () => {
       <div className="fixed inset-0 flex items-center -rotate-2 select-none">
         <div className="relative">
           <div className="bg-white/0 animate-horizontal-scroll flex items-center gap-8 w-max px-8">
-            <h1 className="shrink-0 text-white text-10xl font-black ">text</h1>
+            <h1 className="shrink-0 text-white text-10xl font-black ">SV</h1>
             <h2 className="shrink-0 text-white text-8xl italic font-light">
-              Text
+              GALLERIA
             </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">Text</h2>
+            <h2 className="shrink-0 text-white text-12xl font-bold">Hopeinen Sivellin</h2>
             <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
-              Text
+              Sivellin
             </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">Text</h2>
+            <h2 className="shrink-0 text-white text-9xl font-medium">SV</h2>
             <h2 className="shrink-0 text-white text-9xl font-extralight italic">
-              Text
+              GALLERIA
             </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">text</h2>
+            <h2 className="shrink-0 text-white text-13xl font-bold">Hopeinen Sivellin</h2>
             <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
-              Text
+              Sivellin
             </h2>
           </div>
           <div className="absolute top-0 left-0 bg-white/0 animate-horizontal-scroll-2 flex items-center gap-8 px-8 w-max">
-            <h1 className="shrink-0 text-white text-10xl font-black ">Text</h1>
+            <h1 className="shrink-0 text-white text-10xl font-black ">SV</h1>
             <h2 className="shrink-0 text-white text-8xl italic font-light">
-              text
+              GALLERIA
             </h2>
-            <h2 className="shrink-0 text-white text-12xl font-bold">Text</h2>
+            <h2 className="shrink-0 text-white text-12xl font-bold">Hopeinen Sivellin</h2>
             <h2 className="shrink-0 text-transparent text-12xl font-bold italic outline-text">
-              Text
+              Sivellin
             </h2>
-            <h2 className="shrink-0 text-white text-9xl font-medium">Text</h2>
+            <h2 className="shrink-0 text-white text-9xl font-medium">SV</h2>
             <h2 className="shrink-0 text-white text-9xl font-extralight italic">
-              Text
+              GALLERIA
             </h2>
-            <h2 className="shrink-0 text-white text-13xl font-bold">text</h2>
+            <h2 className="shrink-0 text-white text-13xl font-bold">Hopeinen Sivellin</h2>
             <h2 className="shrink-0 text-transparent text-13xl font-bold outline-text italic">
-              TextS
+              Sivellin
             </h2>
           </div>
         </div>

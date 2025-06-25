@@ -17,6 +17,16 @@
 .text-content-column>ul>li { padding-right: 20px; transition: all 0.8s ease-out; cursor: pointer; }
 .text-content-column>ul>li.active { color: whitesmoke; }
 .text-content-column p { width: 100% !important; margin-left: 0 !important; font-family: sans-serif; font-size: 14px; line-height: 26px; color: #a0a0a0; }
+.text-link {
+  color: #c7d2fe; /* Светлый, синеватый оттенок, чтобы ссылка выделялась */
+  text-decoration: none; /* Убираем стандартное подчеркивание */
+  border-bottom: 1px dashed #6b7280; /* Добавляем пунктирное подчеркивание */
+  transition: all 0.2s ease-in-out;
+}
+.text-link:hover {
+  color: #fff; /* Становится белой при наведении */
+  border-bottom: 1px solid #fff; /* Подчеркивание становится сплошным */
+}
 
 /* --- СЕКЦИЯ 3: ПРОСТОЙ ТЕКСТ --- */
 .third { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; overflow: hidden; background: none; padding: 5rem 1rem; }

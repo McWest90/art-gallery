@@ -11,7 +11,11 @@ export const HomePage = () => {
   const sectionsData = [
     {
       title: "Taidekoulu",
-      text: `Hopeinen Sivellin tarjoaa laadukkaita kuvataidekursseja Helsingissä. TaM Victor Markin johdolla opetetaan öljymaalausta, akryyliä, ikonimaalausta ja piirustusta aloittelijoille ja edistyneille – rakkaudella ja ammattitaidolla.`,
+      text: (
+      <>
+        <Link to="/taidekoulu" className="text-link">Hopeinen Sivellin</Link> tarjoaa laadukkaita kuvataidekursseja Helsingissä. TaM Victor Markin johdolla opetetaan öljymaalausta, akryyliä, ikonimaalausta ja piirustusta aloittelijoille ja edistyneille – rakkaudella ja ammattitaidolla.
+      </>
+    ),
       images: [ // Картинки для "Taidekoulu"
         { src: "/other/Art school/IMG-20250506-WA0024.jpg", alt: "Taidekoulu" },
         { src: "/other/Art school/IMG-20250127-WA0045.jpg", alt: "Taidekoulu" },
@@ -20,7 +24,11 @@ export const HomePage = () => {
     },
     {
       title: "Viktor mark",
-      text: `TaM Viktor Mark opiskeli taidetta Pietarissa ja suoritti diplomityönsä mestari Zagonek Vyacheslavin johdolla. Hänen töitään on ollut esillä näyttelyissä Saksassa, Ranskassa, Australiassa, Suomessa ja useissa muissa maissa.`,
+      text: (
+      <>
+        TaM <Link to="/viktor-mark" className="text-link">Viktor Mark</Link> opiskeli taidetta Pietarissa ja suoritti diplomityönsä mestari Zagonek Vyacheslavin johdolla. Hänen töitään on ollut esillä näyttelyissä Saksassa, Ranskassa, Australiassa, Suomessa ja useissa muissa maissa.
+      </>
+    ),
       images: [ // Картинки для "Viktor mark"
         { src: "/other/Viktor mark/IMG-20250127-WA0021.jpg", alt: "Viktor Mark" },
         { src: "/other/Viktor mark/IMG-20250202-WA0032.jpg", alt: "Viktor Mark" },
@@ -29,7 +37,11 @@ export const HomePage = () => {
     },
     {
       title: "Kehystämö",
-      text: `SV Galleria Helsingissä tarjoaa 40 m² valoisan näyttelytilan isolla ikkunagallerialla Runeberginkadulla. Avoin haku, vuokra alkaen 600 €/viikko. Etusijalla erityistä tukea tarvitsevat taiteilijat.`,
+      text: (
+      <>
+        <Link to="/kehystamo" className="text-link">SV Galleria</Link> Helsingissä tarjoaa 40 m² valoisan näyttelytilan isolla ikkunagallerialla Runeberginkadulla. Avoin haku, vuokra alkaen 600 €/viikko. Etusijalla erityistä tukea tarvitsevat taiteilijat.
+      </>
+    ),
       images: [ // Картинки для "Kehystämö"
         { src: "/other/Framing shop/2025-06-15 205525.png", alt: "Kehystämö" },
         { src: "/other/Framing shop/DSCN3952.JPG", alt: "Kehystämö" }
@@ -159,10 +171,10 @@ const breakpointColumnsObj = {
         <nav className="header ended">
           <Link to="/" className="active a"><span>Galleria</span></Link>
           <Link to="/book" className="a"><span>BOOK</span></Link>
-          <a className="a"><span>Taidekoulu</span></a>
-          <a className="a"><span>Vuokraaminen</span></a>
-          <a className="a"><span>Tilaustyo</span></a>
-          <a className="a"><span>yhteustiedot</span></a>
+          <Link to="/taidekoulu" className="a"><span>Taidekoulu</span></Link>
+          <Link to="/vuokraaminen" className="a"><span>Vuokraaminen</span></Link>
+          <Link to="/tilaustyo" className="a"><span>Tilaustyo</span></Link>
+          <Link to="/yhteustiedot" className="a"><span>Yhteustiedot</span></Link>
           <div className="cursor" ref={cursorRef}></div>
         </nav>
         <div className="main-container" style={{ visibility: "hidden" }}></div>
