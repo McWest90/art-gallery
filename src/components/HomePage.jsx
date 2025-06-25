@@ -160,10 +160,11 @@ const breakpointColumnsObj = {
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <Link to="/" onClick={() => setMenuOpen(false)}>Galleria</Link>
         <Link to="/book" onClick={() => setMenuOpen(false)}>BOOK</Link>
-        <a href="#" onClick={() => setMenuOpen(false)}>Taidekoulu</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Vuokraaminen</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Tilaustyo</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>yhteustiedot</a>
+        <Link to="/taidekoulu" onClick={() => setMenuOpen(false)}>Taidekoulu</Link>
+        <Link to="/vuokraaminen" onClick={() => setMenuOpen(false)}>Vuokraaminen</Link>
+        <Link to="/tilaustyo" onClick={() => setMenuOpen(false)}>Tilaustyo</Link>
+        <Link to="/yhteustiedot" onClick={() => setMenuOpen(false)}>Yhteystiedot</Link>
+
       </div>
 
       <div className="main-container" style={{ visibility: "hidden" }}>
